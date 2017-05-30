@@ -1,0 +1,61 @@
+---
+title: "Quickstart guide"
+author: "Tan Yong kee"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to oneSENSE GUI}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+# Installing and Loading the Package
+
+To install oneSENSE package, start R and run the following code:
+
+```{r, eval=FALSE}
+source("https://bioconductor.org/biocLite.R")
+biocLite("oneSENSE")
+```
+Load the package with the following code
+```{r, message=FALSE}
+library(oneSENSE)
+```
+Read the package description to find out more about oneSENSE GUI
+```{r, eval=TRUE, message=FALSE}
+? "onesense_GUI()"
+```
+
+# Using the oneSENSE package
+
+## Rational of One-SENSE
+
+One-SENSE measures cellular parameters assinged to manually predefined catergories, and a one-dimensional map is constructed for each catergory using t-SNE. Each dimension is informative and can be annotated through the use of heatplots aligned in parallel to each axis, allowing for simultaneous visualization of two catergories across a two-dimensional plot. The cellular occupancy of the resulting plots alllows for direct assessment of the relationships between the categories.
+
+Read more about One-SENSE: [here](https://www.ncbi.nlm.nih.gov/pubmed/26667171)
+
+## Run oneSENSE using the GUI
+
+The easiest way to access oneSENSE is via the Graphics User Interface(GUI) provided in the package. After loading the package, simply set the directory as instructed in the note above and run the following code:
+
+```{r, eval=TRUE}
+onesense_GUI()
+```
+
+
+The interface will appear like below, you can click the information button **!** to check the explanation for each entry and customize your own analysis.
+
+1. Choose the directory where the FCS files are located.
+2. Select the FCS files you want to use for analysis.
+3. Select the first category of markers you want to group together
+4. Select the second category of markers you want to group together
+5. Select a merge method
+    * all: All fcs files will be merged together
+    * min: A minimum number of cells will be selected from each FCS file
+    * ceil: A maximum number of cells that will be subsampled from each FCS file
+    * fixed: Set a fixed number of cells to be subsampled
+6. Input the number of bins you want for the cells to be sorted into
+7. Check if you want to know the frequency heatmap and have it produced in the output
+8. Press submit and everything will run
+9. If frequency heatmap is selected a window will pop out for you to select the cutoff point for each marker.
+
+Depending on the size of your data, it will take some time to run the analysis. Once done, the oneSENSE visualisations will be displayed.

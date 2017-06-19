@@ -10,22 +10,27 @@ vignette: >
 ---
 # Installing and Loading the Package
 
+****************************************************************
 To install oneSENSE package, start R and run the following code:
 
-```{r, eval=FALSE}
-source("https://bioconductor.org/biocLite.R")
-biocLite("oneSENSE")
-```
+
+*source("https://bioconductor.org/biocLite.R")*
+*biocLite("oneSENSE")*
+
 Load the package with the following code
-```{r, message=FALSE}
-library(oneSENSE)
-```
+
+*library(oneSENSE)*
+
 Read the package description to find out more about oneSENSE GUI
-```{r, eval=TRUE, message=FALSE}
-? "onesense_GUI()"
-```
+
+*? "onesense_GUI()"*
+
+
+
 
 # Using the oneSENSE package
+
+**********************************************
 
 ## Rational of One-SENSE
 
@@ -37,25 +42,17 @@ Read more about One-SENSE: [here](https://www.ncbi.nlm.nih.gov/pubmed/26667171)
 
 The easiest way to access oneSENSE is via the Graphics User Interface(GUI) provided in the package. After loading the package, simply set the directory as instructed in the note above and run the following code:
 
-```{r, eval=TRUE}
-onesense_GUI()
-```
+*onesense_GUI()*
 
 
 The interface will appear like below, you can click the information button **!** to check the explanation for each entry and customize your own analysis.
 
 1. Choose the directory where the FCS files are located.
 2. Select the FCS files you want to use for analysis.
-3. Select the first category of markers you want to group together
-4. Select the second category of markers you want to group together
-5. Select a merge method
-    * all: All fcs files will be merged together
-    * min: A minimum number of cells will be selected from each FCS file
-    * ceil: A maximum number of cells that will be subsampled from each FCS file
-    * fixed: Set a fixed number of cells to be subsampled
-6. Input the number of bins you want for the cells to be sorted into
-7. Check if you want to know the frequency heatmap and have it produced in the output
-8. Press submit and everything will run
-9. If frequency heatmap is selected a window will pop out for you to select the cutoff point for each marker.
+3. Select the first, second and/or third(optional) category of markers you want to group together
+4. Input the number of cells you want to subsample from each FCS file.
+5. Input the number of bins you want for the cells to be sorted into
+6. Press submit and it will run to produce median heatplots
+7. If you wish to do a frequency heatmap, press select coordinates and then run press frequency heatplots.
 
 Depending on the size of your data, it will take some time to run the analysis. Once done, the oneSENSE visualisations will be displayed.

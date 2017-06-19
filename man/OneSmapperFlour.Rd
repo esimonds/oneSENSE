@@ -2,7 +2,7 @@
 % Please edit documentation in R/YKOneSmapperFlour.R
 \name{OneSmapperFlour}
 \alias{OneSmapperFlour}
-\title{Median and frequency heatplot generation}
+\title{Median heatplot generation}
 \usage{
 OneSmapperFlour(LoaderPATH = "fcs_Out", Bins = 250, doCoords = FALSE,
   doFreq = FALSE)
@@ -23,7 +23,7 @@ PNG files of combined oneSENSE and heatplot.
 This returns the median heatplot for each category of markers chosen. If frequency heatplot is selected in the onesense GUI, then both median and frequency heatplots are generated as PDF files in working directory
 }
 \examples{
-fcsoutpath <- paste(getwd(), "fcs_Out", sep = .Platform$file.sep)
+#fcsoutpath <- paste(getwd(), "fcs_Out", sep = .Platform$file.sep)
 #remove hash symbol to run
-#OneSmapperFlour(LoaderPATH=fcsoutpath)
+#OneSmapperFlour(LoaderPATH=fcsoutpath) #remove hash symbol to run
 }

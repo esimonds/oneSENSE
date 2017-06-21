@@ -1,10 +1,10 @@
 Package: oneSENSE
 Type: Package
 Title: One-Dimensional Soli-Expression by Nonlinear Stochastic Embedding (OneSENSE)
-Version: 0.99.5
+Version: 0.99.6
 Date: 2017-06-19
 Author: Cheng Yang, Evan Newell, Yong Kee Tan
-Maintainer: Yong Kee Tan <yongkee.t@gmail.com>
+Maintainer: Yong Kee Tan <A0124942@u.nus.edu>
 Description: A graphical user interface to allow categorical analysis of FCS data.
 Depends: R (>= 3.4), webshot, flowCore, tcltk
 Imports: Rtsne, plotly, gplots, tcltk2, shiny, grDevices, graphics, stats, utils

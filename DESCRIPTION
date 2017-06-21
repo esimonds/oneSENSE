@@ -6,7 +6,7 @@ Date: 2017-06-19
 Author: Cheng Yang, Evan Newell, Yong Kee Tan
 Maintainer: Yong Kee Tan <yongkee.t@gmail.com>
 Description: A graphical user interface to allow categorical analysis of FCS data.
-Depends: R (>= 3.3.0), webshot, flowCore, tcltk
+Depends: R (>= 3.4), webshot, flowCore, tcltk
 Imports: Rtsne, plotly, gplots, tcltk2, shiny, grDevices, graphics, stats, utils
 License: GPL (>=3)
 Encoding: UTF-8

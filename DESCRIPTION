@@ -1,7 +1,7 @@
 Package: oneSENSE
 Type: Package
 Title: One-Dimensional Soli-Expression by Nonlinear Stochastic Embedding (OneSENSE)
-Version: 0.99.7
+Version: 0.99.0
 Date: 2017-06-23
 Author: Cheng Yang, Evan Newell, Yong Kee Tan
 Maintainer: Yong Kee Tan <A0124942@u.nus.edu>

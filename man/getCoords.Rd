@@ -20,7 +20,7 @@ Title
 \examples{
 #remove hash symbol to run
 dir4 <- system.file('extdata/extra', package = 'oneSENSE')
-file5 <- system.file('extdata/FFdata.Rdata', package = 'oneSENSE')
-load(file5)
-getCoords(dir4, FFdata=FFdata)
+file5 <- system.file('extdata/myFFdatas.Rds', package = 'oneSENSE')
+FFdata = readRDS(file5)
+getCoords(dir4, FFdata)
 }

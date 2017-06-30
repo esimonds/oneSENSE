@@ -5,12 +5,14 @@
 \title{Title
 Frequency Heatplot Generation Part 2}
 \usage{
-OneSmapperFreq2(LoaderPATH = "fcs", Bins = 250)
+OneSmapperFreq2(LoaderPATH = "fcs", Bins = 250, FFdata = FFdata)
 }
 \arguments{
 \item{LoaderPATH}{path of fcs_Out files}
 
 \item{Bins}{Number of bins}
+
+\item{FFdata}{Flow Frame data}
 }
 \value{
 returns frequency heatplot
@@ -21,6 +23,7 @@ Frequency Heatplot Generation Part 2
 }
 \examples{
 dir2 <- system.file('extdata',package='oneSENSE')
-
+file5 <- system.file('extdata/myFFdatas.Rds', package = 'oneSENSE')
+FFdata = readRDS(file5)
 #OneSmapperFreq2(dir2, 250) #remove hash symbol to run
 }

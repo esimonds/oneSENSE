@@ -1,8 +1,8 @@
 Package: oneSENSE
 Type: Package
 Title: One-Dimensional Soli-Expression by Nonlinear Stochastic Embedding (OneSENSE)
-Version: 0.99.1
-Date: 2017-06-30
+Version: 0.99.0
+Date: 2017-06-14
 Author: Cheng Yang, Evan Newell, Yong Kee Tan
 Maintainer: Yong Kee Tan <yongkee.t@gmail.com>
 Description: A graphical user interface that facilitates the dimensional reduction method based on the 
@@ -12,8 +12,8 @@ Description: A graphical user interface that facilitates the dimensional reducti
     heatplots aligned in parallel to each axis, allowing for simultaneous visualization of two catergories across a 
     two-dimensional plot. The cellular occupancy of the resulting plots alllows for direct assessment of the relationships 
     between the categories. 
-Depends: R (>= 3.4), webshot, shiny, shinyFiles
-Imports: Rtsne, plotly, gplots, grDevices, graphics, stats, utils, scatterplot3d, shinyFiles, methods, flowCore
+Depends: R (>= 3.4), webshot, shiny, shinyFiles, scatterplot3d
+Imports: Rtsne, plotly, gplots, grDevices, graphics, stats, utils, methods, flowCore
 License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true

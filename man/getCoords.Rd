@@ -2,7 +2,7 @@
 % Please edit documentation in R/YKOneSmapperFlour.R
 \name{getCoords}
 \alias{getCoords}
-\title{Title}
+\title{Get Coordinates of median position}
 \usage{
 getCoords(LoaderPATH = LoaderPATH, FFdata = FFdata)
 }
@@ -15,7 +15,7 @@ getCoords(LoaderPATH = LoaderPATH, FFdata = FFdata)
 Assign global variables for access
 }
 \description{
-Title
+Get Coordinates of median position
 }
 \examples{
 #remove hash symbol to run

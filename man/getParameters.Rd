@@ -2,8 +2,7 @@
 % Please edit documentation in R/YKOneSmapperFlour.R
 \name{getParameters}
 \alias{getParameters}
-\title{Title
-Get parameters}
+\title{Get parameters from FCS files}
 \usage{
 getParameters(rawFCSdir)
 }
@@ -14,11 +13,10 @@ getParameters(rawFCSdir)
 mid
 }
 \description{
-Title
-Get parameters
+Get parameters from FCS files
 }
 \examples{
 #remove hash to run
-dir3 <- system.file('extdata', package = 'oneSENSE')
+dir3 <- system.file('extdata/fcs', package = 'oneSENSE')
 getParameters(dir3)
 }

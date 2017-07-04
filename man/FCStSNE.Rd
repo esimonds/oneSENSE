@@ -29,8 +29,6 @@ FCS files, tSNE histograms, OneSENSE plot
 tSNE and OneSENSE algorithm for FCS data
 }
 \examples{
-#dir <- system.file('extdata',package='oneSENSE')
-#fnnames <- system.file('extdata', "names.csv", package='oneSENSE')
-
-#FCStSNE(LoaderPATH = dir, FNnames = fnnames) #remove hash symbol to run
+#dir <- system.file('extdata/fcs', package='oneSENSE')
+#FCStSNE(LoaderPATH=dir, FNnames=fnnames) #remove hash symbol to run
 }

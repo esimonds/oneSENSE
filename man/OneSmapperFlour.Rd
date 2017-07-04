@@ -23,7 +23,7 @@ PNG files of combined oneSENSE and heatplot.
 This returns the median heatplot for each category of markers chosen. If frequency heatplot is selected in the onesense GUI, then both median and frequency heatplots are generated as PDF files in working directory
 }
 \examples{
-#fcsoutpath <- paste(getwd(), "fcs_Out", sep = .Platform$file.sep)
+#fcsoutpath <- system.file('extdata/fcs_Out',package='oneSENSE')
 #remove hash symbol to run
 #OneSmapperFlour(LoaderPATH=fcsoutpath) #remove hash symbol to run
 }

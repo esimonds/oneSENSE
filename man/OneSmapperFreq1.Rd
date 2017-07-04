@@ -2,9 +2,9 @@
 % Please edit documentation in R/YKOneSmapperFlour.R
 \name{OneSmapperFreq1}
 \alias{OneSmapperFreq1}
-\title{Title}
+\title{Generate Frequency Heatplot Part 1}
 \usage{
-OneSmapperFreq1(LoaderPATH = "fcs")
+OneSmapperFreq1(LoaderPATH = "fcs_Out")
 }
 \arguments{
 \item{LoaderPATH}{Path of fcs_Out files}
@@ -13,9 +13,9 @@ OneSmapperFreq1(LoaderPATH = "fcs")
 Flow Frame data for coordinate selection
 }
 \description{
-Title
+Generate Frequency Heatplot Part 1
 }
 \examples{
-dir1 <- system.file('extdata',package='oneSENSE')
+dir1 <- system.file('extdata/fcs',package='oneSENSE')
 OneSmapperFreq1(dir1) #remove hash symbol to run
 }

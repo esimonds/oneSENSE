@@ -10,8 +10,10 @@ oneSENSE_GUI()
 GUI for onesense analysis
 }
 \description{
-This GUI provides an easy way for Flow Cytometry data analysis using the oneSENSE package. Main parameters for running 'oneSENSE' were integrated in this GUI, and analysis results are launched in Rstudio after submission.
-Title
+This GUI provides an easy way for Flow Cytometry data analysis
+using the oneSENSE package. Main parameters for running 'oneSENSE'
+were integrated in this GUI, and analysis results are launched
+in Rstudio after submission.
 }
 \examples{
 

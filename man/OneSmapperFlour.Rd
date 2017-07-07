@@ -8,21 +8,26 @@ OneSmapperFlour(LoaderPATH = "fcs_Out", Bins = 250, doCoords = FALSE,
   doFreq = FALSE)
 }
 \arguments{
-\item{LoaderPATH}{Name of the output file containing fcs files generated from FCStSNE2.R}
+\item{LoaderPATH}{Name of the output file containing fcs files generated
+from FCStSNE2.R}
 
 \item{Bins}{Number of bins to sort cells into corresponding heatplot}
 
 \item{doCoords}{a boolean that allows for frequency heatplot generation}
 
-\item{doFreq}{a boolean to allow for the frequency heatplot generation. TRUE to run, FALSE to not run.}
+\item{doFreq}{a boolean to allow for the frequency heatplot generation.
+TRUE to run, FALSE to not run.}
 }
 \value{
 PNG files of combined oneSENSE and heatplot.
 }
 \description{
-This returns the median heatplot for each category of markers chosen. If frequency heatplot is selected in the onesense GUI, then both median and frequency heatplots are generated as PDF files in working directory
+This returns the median heatplot for each category of markers chosen.
+If frequency heatplot is selected in the onesense GUI, then both median
+and frequency heatplots are generated as PDF files in working directory
 }
 \examples{
+webshot::install_phantomjs()
 #fcsoutpath <- system.file('extdata/fcs_Out',package='oneSENSE')
 #remove hash symbol to run
 #OneSmapperFlour(LoaderPATH=fcsoutpath) #remove hash symbol to run

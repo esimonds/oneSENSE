@@ -20,6 +20,7 @@ returns frequency heatplot
 Frequency Heatplot Generation Part 2
 }
 \examples{
+
 dir2 <-system.file('extdata/fcs_Out',package='oneSENSE')
 file5 <- system.file('extdata/myFFdatas.Rds', package = 'oneSENSE')
 FFdata1 <- readRDS(file5)

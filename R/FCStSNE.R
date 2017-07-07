@@ -3,28 +3,23 @@
 #' tSNE and OneSENSE algorithm for FCS data
 #'
 #' @param LoaderPATH Path where FCS file is located
-#' @param ceil Maximum number of cells to sample
-#'     from each fcs sample/file
-#' @param FNnames .csv file generated when markers from each
-#'     category are selected
+#' @param ceil Maximum number of cells to sample from each fcs sample/file
+#' @param FNnames .csv file generated when markers from each category are selected
 #' @param OutputSuffix suffix to name output folder
 #' @param DotSNE boolean, if TRUE do tSNE, if FALSE skip tSNE
-#' @param DoOneSENSE boolean, if TRUE do OneSENSE,
-#'     if FALSE skip OneSENSE
+#' @param DoOneSENSE boolean, if TRUE do OneSENSE, if FALSE skip OneSENSE
 #' @param Bins number of bins to put the cell data into, DEFAULT = 250
 #'
 #' @return FCS files, tSNE histograms, OneSENSE plot
 #'
 #' @importFrom Rtsne Rtsne
 #' @importFrom graphics hist
-#' @importFrom flowCore read.flowSet exprs keyword
-#'     write.FCS logicleTransform inverseLogicleTransform
-#'     identifier exprs<- identifier<-
+#' @importFrom flowCore read.flowSet exprs keyword write.FCS logicleTransform inverseLogicleTransform identifier exprs<- identifier<-
 #' @importFrom methods cbind2
 #'
 #' @examples
 #' #dir <- system.file('extdata/fcs', package='oneSENSE')
-#' #FCStSNE(LoaderPATH=dir, FNnames=fnnames)
+#' #FCStSNE(LoaderPATH=dir, FNnames=fnnames) #remove hash symbol to run
 FCStSNE <- function(LoaderPATH = "fcs",
                     ceil = 5000,
                     FNnames = "names.csv",
@@ -43,7 +38,7 @@ FCStSNE <- function(LoaderPATH = "fcs",
         ## Downsample ##
         if (nrow(FFt) <= ceil)
             FFa <- FFt else FFa <- FFt[sample(nrow(FFt), ceil,
-                                            replace = FALSE), ]
+                                                replace = FALSE), ]
             colnames(FFa) <- fs[[FFs]]@parameters$desc
             empties <- which(is.na(colnames(FFa)) | colnames(FFa) == " ")
             colnames(FFa)[empties] <- fs[[FFs]]@parameters$name[empties]
@@ -135,8 +130,7 @@ FCStSNE <- function(LoaderPATH = "fcs",
     # output new FCS files
     for (FFs in 1:NumBC) {
         newFF <- fs[[1]]
-        newBaseData <- FFdata[FFdata[,
-                                    dim(FFdata)[2]] == FFs, -dim(FFdata)[2]]
+        newBaseData <- FFdata[FFdata[, dim(FFdata)[2]] == FFs, -dim(FFdata)[2]]
         colnames(newBaseData) <- colnames(exprs(newFF))
         exprs(newFF) <- newBaseData
         subsetNIscore <- NIscore[FFdata[, dim(FFdata)[2]] == FFs, ]
@@ -147,8 +141,7 @@ FCStSNE <- function(LoaderPATH = "fcs",
         FNresult <- paste0(LoaderPATH, "_", OutputSuffix,
                         "/", BaseFN, "_", OutputSuffix, ".fcs")
         newFF@description$"$FIL" <- paste0(BaseFN, "_", OutputSuffix, ".fcs")
-        newFF@description$FILENAME <- paste0(
-                                    BaseFN, "_", OutputSuffix, ".fcs")
+        newFF@description$FILENAME <- paste0(BaseFN, "_", OutputSuffix, ".fcs")
         identifier(newFF) <- paste0(BaseFN, "_", OutputSuffix)
         suppressWarnings(write.FCS(newFF, FNresult))
     }

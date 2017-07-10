@@ -12,7 +12,8 @@ FCStSNE(LoaderPATH = "fcs", ceil = 5000, FNnames = "names.csv",
 
 \item{ceil}{Maximum number of cells to sample from each fcs sample/file}
 
-\item{FNnames}{.csv file generated when markers from each category are selected}
+\item{FNnames}{.csv file generated when markers from each category
+are selected}
 
 \item{OutputSuffix}{suffix to name output folder}
 

@@ -20,7 +20,7 @@ Get Coordinates of median position
 \examples{
 #remove hash symbol to run
 dir4 <- system.file('extdata/extra', package = 'oneSENSE')
-file5 <- system.file('extdata/myFFdatas.Rds', package = 'oneSENSE')
+file5 <- system.file('extdata/myFFdatas.rds', package = 'oneSENSE')
 FFdata = readRDS(file5)
 getCoords(dir4, FFdata)
 }

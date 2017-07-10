@@ -128,6 +128,9 @@ OneSmapperFlour <- function(LoaderPATH = "fcs_Out",
     OneSplot <- plot_ly(data.frame(Xx1DtSNEmat),
                     x = Xx1DtSNEmat[, 1],
                     y = Xx1DtSNEmat[, 2],
+                    marker = list(size = 5,
+                                    color = 'rgba(0, 0, 0, .2)'
+                                    ),
                     type = "scatter",
                     symbol = "circle-dot")
     suppressWarnings(combined <- subplot(OneSplot, p2, p1,
@@ -362,6 +365,9 @@ OneSmapperFreq2 <- function(LoaderPATH = "fcs", Bins = 250, FFdata) {
     OneSplot <- plot_ly(data.frame(Xx1DtSNEmat),
                         x = Xx1DtSNEmat[, 1],
                         y = Xx1DtSNEmat[, 2],
+                        marker = list(size = 5,
+                                    color = 'rgba(0, 0, 0, .2)'
+                        ),
                         type = "scatter",
                         symbol = "circle-dot")
     suppressWarnings(fcombined <- subplot(OneSplot, d2, d1, nrows = 2,

@@ -66,13 +66,12 @@ oneSENSE_GUI <- function() {
         parseDirPath(roots = volumes, input$directory)
     })
 
-    observeEvent(input$directory, {
-        fileChosen <- parseDirPath(volumes, input$directory)
-        shinyFileChoose(input, "files",
-                    roots = c(fcs=fileChosen),
-                    session = session,
-                    filetype = list(fcs = 'fcs'))
-    })
+    observeEvent(input$firstMarkers, {
+        myParam <- getParameters(parseDirPath(volumes, input$directory))
+        updateCheckboxGroupInput(session, "markers1", choices = myParam[[1]])
+        updateCheckboxGroupInput(session, "markers2", choices = myParam[[1]])
+        updateCheckboxGroupInput(session, "markers3", choices = myParam[[1]])
+        })
     ## CONFIRM CATEGORY MARKERS TO WRITE CSV ##
     observeEvent(input$updatenamescsv, {
         myParam <- getParameters(parseDirPath(volumes, input$directory))

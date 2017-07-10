@@ -96,13 +96,13 @@ oneSENSE_GUI <- function() {
             write.csv(final,
                 paste(dirname(parseDirPath(volumes, input$directory)),
                     "names.csv", sep = .Platform$file.sep), row.names = FALSE)
-      } else {
+        } else {
         final <- cbind(names1, input2 = names2[, 2], input3 = names3[, 2])
         write.csv(
             final,
             paste(dirname(parseDirPath(volumes, input$directory)),
                 "names.csv", sep = .Platform$file.sep), row.names = FALSE)
-      }
+        }
     })
 
     ## DO TSNE AND ONESENSE ##

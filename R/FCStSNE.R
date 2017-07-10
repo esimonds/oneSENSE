@@ -4,7 +4,8 @@
 #'
 #' @param LoaderPATH Path where FCS file is located
 #' @param ceil Maximum number of cells to sample from each fcs sample/file
-#' @param FNnames .csv file generated when markers from each category are selected
+#' @param FNnames .csv file generated when markers from each category
+#'     are selected
 #' @param OutputSuffix suffix to name output folder
 #' @param DotSNE boolean, if TRUE do tSNE, if FALSE skip tSNE
 #' @param DoOneSENSE boolean, if TRUE do OneSENSE, if FALSE skip OneSENSE
@@ -14,7 +15,8 @@
 #'
 #' @importFrom Rtsne Rtsne
 #' @importFrom graphics hist
-#' @importFrom flowCore read.flowSet exprs keyword write.FCS logicleTransform inverseLogicleTransform identifier exprs<- identifier<-
+#' @importFrom flowCore read.flowSet exprs keyword write.FCS logicleTransform
+#'     inverseLogicleTransform identifier exprs<- identifier<-
 #' @importFrom methods cbind2
 #'
 #' @examples

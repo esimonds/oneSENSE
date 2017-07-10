@@ -112,13 +112,13 @@ OneSmapperFlour <- function(LoaderPATH = "fcs_Out",
                     colors = my_palette,
                     type = "heatmap") %>% layout(title = paste(OneDtSNEname,
                                             "Median heatplot", sep = " "))
-      p1
+        p1
     } else {
-      p2 <- plot_ly(z = hmapclut, x = colnames(hmapclut), y = testcol,
+        p2 <- plot_ly(z = hmapclut, x = colnames(hmapclut), y = testcol,
             colors = my_palette,
             type = "heatmap") %>% layout(title = paste(OneDtSNEname,
                 "Median heatplot", sep = " "), showlegend = FALSE)
-      p2
+        p2
     }
 
 
@@ -131,9 +131,9 @@ OneSmapperFlour <- function(LoaderPATH = "fcs_Out",
                     type = "scatter",
                     symbol = "circle-dot")
     suppressWarnings(combined <- subplot(OneSplot, p2, p1,
-                       nrows = 2,
-                       shareY = TRUE,
-                       shareX = TRUE))
+                                        nrows = 2,
+                                        shareY = TRUE,
+                                        shareX = TRUE))
     combined
     export(combined, file = paste(dirname(LoaderPATH),
             "groupone.png",
@@ -220,7 +220,7 @@ OneSmapperFreq1 <- function(LoaderPATH = "fcs_Out") {
 #' @examples
 #' #remove hash symbol to run
 #' dir4 <- system.file('extdata/extra', package = 'oneSENSE')
-#' file5 <- system.file('extdata/myFFdatas.Rds', package = 'oneSENSE')
+#' file5 <- system.file('extdata/myFFdatas.rds', package = 'oneSENSE')
 #' FFdata = readRDS(file5)
 #' getCoords(dir4, FFdata)
 getCoords <- function(LoaderPATH = LoaderPATH, FFdata = FFdata) {
@@ -231,15 +231,15 @@ getCoords <- function(LoaderPATH = LoaderPATH, FFdata = FFdata) {
     gckeeprowbool <- apply(gckeeptable[, c(2, 3)],
                                 1,
                                 function(x) any(x == "Y"))
-  gckeepnames <- gckeeptable[gckeeprowbool, 1]
-  gckeeprows <- subset(gckeeptable, gckeeprowbool)
-  gcdata <- FFdata[, which(colnames(FFdata) %in% gckeeprows[, 1])]
-  gcdata <- cbind(gcdata,
+    gckeepnames <- gckeeptable[gckeeprowbool, 1]
+    gckeeprows <- subset(gckeeptable, gckeeprowbool)
+    gcdata <- FFdata[, which(colnames(FFdata) %in% gckeeprows[, 1])]
+    gcdata <- cbind(gcdata,
                 FFdata[, which(
                     colnames(FFdata) %in% colnames(gckeeptable[-1]))])
-  data1 <- apply(gcdata, 2, lgcl)
-  coordsVar <- list(keepnames = gckeepnames, data1 = data1)
-  return(coordsVar)
+    data1 <- apply(gcdata, 2, lgcl)
+    coordsVar <- list(keepnames = gckeepnames, data1 = data1)
+    return(coordsVar)
 }
 
 ## *************************************************************************##
@@ -256,7 +256,7 @@ getCoords <- function(LoaderPATH = LoaderPATH, FFdata = FFdata) {
 #' @examples
 #'
 #' dir2 <-system.file('extdata/fcs_Out',package='oneSENSE')
-#' file5 <- system.file('extdata/myFFdatas.Rds', package = 'oneSENSE')
+#' file5 <- system.file('extdata/myFFdatas.rds', package = 'oneSENSE')
 #' FFdata1 <- readRDS(file5)
 #' OneSmapperFreq2(dir2, 250, FFdata1) #remove hash symbol to run
 OneSmapperFreq2 <- function(LoaderPATH = "fcs", Bins = 250, FFdata) {
@@ -347,7 +347,7 @@ OneSmapperFreq2 <- function(LoaderPATH = "fcs", Bins = 250, FFdata) {
                                             "Frequency heatplot", sep = " ")))
         d1
     } else {
-      suppressWarnings(d2 <- plot_ly(z = fhmapclut,
+        suppressWarnings(d2 <- plot_ly(z = fhmapclut,
                                     x = colnames(fhmapclut),
                                     y = ftestcol,
                                     colors = my_palette,

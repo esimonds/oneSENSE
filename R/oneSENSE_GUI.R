@@ -37,7 +37,8 @@ oneSENSE_GUI <- function() {
         actionButton("submit2", "Coordinate Selection"),
         br(),
         br(),
-        actionButton("submit3", "Generate Frequency heatmap")),
+        actionButton("submit3", "Generate Frequency heatmap (Have you
+                     generated CSV?)")),
         mainPanel(
             tabsetPanel(id = "Tabset1",
                 tabPanel("Marker selection",

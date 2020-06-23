@@ -61,7 +61,7 @@ oneSENSE_GUI <- function() {
 
     server <- function(input, output, session) {
 
-    volumes = getVolumes()
+    volumes = getVolumes()()
     shinyDirChoose(input, "directory", roots = volumes, session = session)
     output$directorypath <- renderPrint({
         parseDirPath(roots = volumes, input$directory)
